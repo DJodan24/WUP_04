@@ -72,14 +72,12 @@ There is a general trend in the means of the different groups that moves upwards
 
 ```{r}
 model1 <- aov(WORDSUM~DEGREE,data=mydata)
-conf_interval <- confint(model1, level = 0.98)
-conf_interval
 summary.aov(model1)
 ```
-```{r include=TRUE, echo=FALSE}
-par(mar =c(3, 8.7,2,2))
-plot(TukeyHSD(model1,conf.level = 0.98),las=2)
-```
+
+The very small p-value of 0.00236 indicates there is a statistically significant difference in wordsum scores depending on educational level.
+
+
 
 # Discussion and Conclusion
 
