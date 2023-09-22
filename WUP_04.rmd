@@ -77,7 +77,11 @@ summary.aov(model1)
 
 The very small p-value of 0.00236 indicates there is a statistically significant difference in wordsum scores depending on educational level.
 
+```{r}
+plot(TukeyHSD(model1, conf.level = 0.98),las=2, cex.axis = 0.3)
+```
 
+The specific differences between the different groups are less drastic than the p value indicates. The majority of the comparisons between the groups have 0 within their 98% confidence interval indicating little to no significant difference in their wordsum scores. However the comparisons  between LT high school and those with graduate degrees and the comparison  between those with highschool education and those with graduates degrees are likely significant since their 98% confidence intervals do not include 0.
 
 # Discussion and Conclusion
 
