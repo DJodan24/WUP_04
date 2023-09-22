@@ -54,9 +54,15 @@ ggplot(mydata, aes(x = DEGREE, y = WORDSUM))+
   theme_minimal()
 ```
 
+It appears that the IQR of the High School is underneath the median of alll of the collage groups
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r include=TRUE, echo=FALSE}
+favstats(WORDSUM~DEGREE,data=mydata)
+```
 
 ## Inferential Results
 
